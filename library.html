@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+  <title>Welcome to Harry Potter Library</title>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Vinay Library</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" id="searchTxt" type="search" id="searchTxt" placeholder="Search by title, description" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+
+
+
+<div class="container my-3">
+  <div id="message"></div>
+  <h1>Vinay Library</h1>
+  <hr>
+  <form id=libraryForm>
+    <div class="form-group row">
+      <label for="bookName" class="col-sm-2 col-form-label">Name</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="bookName" placeholder="Book Name">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="bookName" class="col-sm-2 col-form-label">Author</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="author" placeholder="Author">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="Author" class="col-sm-2 col-form-label">Type</label>
+      <div class="col-sm-10">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="type" id="fiction" value="fiction" checked>
+          <label class="form-check-label" for="fiction">
+            Fiction
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="type" id="programming" value="programming">
+          <label class="form-check-label" for="programming">
+            Computer Programming
+          </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="type" id="cooking" value="cooking">
+            <label class="form-check-label" for="cooking">
+              Cooking
+            </label>
+        </div>
+      </div>
+    </div>    
+    <div class="form-group row">
+        <input type="hidden" id="hiddenIdValue" value="" />
+    </div>
+    <div class="form-group row">
+      <div class="col-sm-10">
+        <button type="button" id="resetBtn" class="btn btn-secondary mr-2">Reset</button>
+        <button type="submit" id="addBtn" class="btn btn-primary">Add book</button>
+      </div>
+    </div>
+  </form>
+  <div id="table">
+    <h1>Your books</h1>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <!-- <th scope="col">#</th> -->
+          <th scope="col">Name</th>
+          <th scope="col">Author</th>
+          <th scope="col">Type</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody"></tbody>
+    </table>
+  </div>  
+</div>	
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<!-- <script src="js/library.js"></script> -->
+<script src="js/library_es6.js"></script>
+</body>
+</html>
